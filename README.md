@@ -9,11 +9,13 @@ Digital cameras transform sensor RAW readings into RGB images by means of their 
 
 In this challenge, we look for solutions to recover RAW readings from the camera using only the corresponding RGB images processed by the in-camera ISP. Successful solutions should generate plausible RAW images, and by doing this, other downstream tasks like Denoising, Super-resolution or Colour Constancy can benefit from such synthetic data generation.
 
+**[Starter Code](aim-starter-code.ipynb )** - Simple dataloading and visualization og RGB-RAW pairs + other utils.
+
 ## Datasets
 
 **Samsung S7 DeepISP Dataset**
 
-We use a custom version of the dataset collected by Schwartz et al. in their work *[DeepISP: Learning End-to-End Image Processing Pipeline](https://arxiv.org/abs/1801.06724)*. We process the original RAW images (GRBG pattern) and extract "aligned" RGB-RAW crop pairs.
+We use a custom version of the dataset collected by Schwartz et al. in their work *[DeepISP: Learning End-to-End Image Processing Pipeline](https://arxiv.org/abs/1801.06724)*. We process the original RAW images (GRBG pattern) and extract "aligned" RGB-RAW pairs (patches).
 
 **ETH Huawei P20 Dataset**
 
@@ -27,8 +29,29 @@ In both tracks, we provide RAW and RGB images extracted from the camera ISP.
 
 You can download the competition data after registering at the challenge [here](https://codalab.lisn.upsaclay.fr/competitions/5079).
 
-- Track 1 data is approx 3 Gb
-- Track 2 data is approx 2.5 Gb
+The data sctructure should be as follows:
+
+```
+├── data-p20
+│   ├── train
+│   └── val_rgb
+└── data-s7
+    ├── train
+    └── val_rgb
+    
+```
+
+`data-p20` should be around 3 Gb and `data-s7` should be around 2.5 Gb
+
+- `train/` contains RGBs in `.jpg` format and RAWs in `.npy` format
+- `val_rgb/` contains RGBs in `.jpg`
+
+From the corresponding RGBs, you need to reverse the ISP operations an provide the corresponding RAW image.
+
+For each track, the training / validation split is as follows:
+- track 1:  Training samples: 4320 	 Validation samples: 480
+- track 2:  Training samples: 5760 	 Validation samples: 720
+
 
 ## Hints and Tips
 
@@ -37,7 +60,7 @@ You can download the competition data after registering at the challenge [here](
 - RAW images are already converted to standard RGGB pattern.
 - Mosaic and Demosaic functions are provided for visualization purposes only.
 - For the S7 dataset, most of the images are well-aligned, SSIM and PSNR should work as perceptual metrics.
-- For the HP20 dataset, most of the images are **not** aligned. The RGB from the ISP is the process of many transformations includding cropping and zooming. Therefore we recomend perceptual losses as SSIM, MSSSIM and KL-Divergence. In this track, we focus on SSIM as standard metric, but we will consider internally the other mentioned metrics. 
+- For the HP20 dataset, most of the images are **not** aligned. The RGB from the ISP is the process of many transformations including cropping and zooming. Therefore, in this track we recommend perceptual losses as SSIM, MSSSIM and KL-Divergence. In this track, we focus on SSIM as standard metric, but we will consider internally the other mentioned metrics. 
 - The ISP corrects many artifacts such as noise and blur. The original RAW images threfore might contain such artifacts.
 
 ## Related Work
