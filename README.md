@@ -1,4 +1,4 @@
-# [AIM 2022 - Reverse ISP Challenge ](https://data.vision.ee.ethz.ch/cvl/aim22/) 
+# [AIM 2022 Reversed ISP Challenge](https://data.vision.ee.ethz.ch/cvl/aim22/) 
 
 ### [Track 1 - S7](https://codalab.lisn.upsaclay.fr/competitions/5079)
 ### [Track 2 - HP20](https://codalab.lisn.upsaclay.fr/competitions/5080)
