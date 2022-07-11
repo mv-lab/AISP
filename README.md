@@ -1,7 +1,7 @@
 # [AIM 2022 Reversed ISP Challenge](https://data.vision.ee.ethz.ch/cvl/aim22/) 
 
 ### [Track 1 - S7](https://codalab.lisn.upsaclay.fr/competitions/5079)
-### [Track 2 - HP20](https://codalab.lisn.upsaclay.fr/competitions/5080)
+### [Track 2 - P20](https://codalab.lisn.upsaclay.fr/competitions/5080)
 
 <a href="https://data.vision.ee.ethz.ch/cvl/aim22/"><img src="https://i.ibb.co/VJ7SSQj/aim-challenge-teaser.png" alt="aim-challenge-teaser" width="400" border="0"></a>
 
@@ -84,7 +84,7 @@ For each track, the training / validation split is as follows:
 
 ## Related Work
 
-[1] [Model-Based Image Signal Processors via Learnable Dictionaries](https://arxiv.org/abs/2201.03210), AAAI 2022.
+[1] [Model-Based Image Signal Processors via Learnable Dictionaries](https://ojs.aaai.org/index.php/AAAI/article/view/19926) by Conde et al, AAAI 2022.
 
 [2] [Learned Smartphone ISP on Mobile NPUs with Deep Learning, Mobile AI 2021 Challenge: Report](https://arxiv.org/abs/2105.07809) by Ignatov et al, CVPRW 2021.
 
