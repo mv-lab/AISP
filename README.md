@@ -1,4 +1,21 @@
-# [AIM 2022 Reversed ISP Challenge](https://data.vision.ee.ethz.ch/cvl/aim22/) 
+# AI Image Signal Processing
+
+[Marcos V. Conde](https://scholar.google.com/citations?user=NtB1kjYAAAAJ&hl=en), [Radu Timofte](https://scholar.google.com/citations?user=u3MwH5kAAAAJ&hl=en)
+
+Computer Vision Lab, CAIDAS, University of Würzburg
+
+#### Contents
+
+1. [AIM 2022 Reversed ISP Challenge](#aim-2022-reversed-isp-challenge) Official repo!
+1. [Model-Based Image Signal Processors via Learnable Dictionaries](https://ojs.aaai.org/index.php/AAAI/article/view/19926) AAAI 2022 Oral
+1. [MAI 2022 Learned ISP Challenge](#mai-2022-learned-isp-challenge) Complete Baseline solution
+1. [Citation and Acknowledgement](#citation-and-acknowledgement)
+1. [Contact](#contact)
+
+---------------------------------------------------
+
+
+## [AIM 2022 Reversed ISP Challenge](https://data.vision.ee.ethz.ch/cvl/aim22/) 
 
 ### [Track 1 - S7](https://codalab.lisn.upsaclay.fr/competitions/5079)
 ### [Track 2 - P20](https://codalab.lisn.upsaclay.fr/competitions/5080)
@@ -9,7 +26,7 @@ Digital cameras transform sensor RAW readings into RGB images by means of their 
 
 In this challenge, we look for solutions to recover RAW readings from the camera using only the corresponding RGB images processed by the in-camera ISP. Successful solutions should generate plausible RAW images, and by doing this, other downstream tasks like Denoising, Super-resolution or Colour Constancy can benefit from such synthetic data generation.
 
-## Starter guide and code 🔥
+### Starter guide and code 🔥
 
 - **[aim-starter-code.ipynb](aim-starter-code.ipynb)** - Simple dataloading and visualization of RGB-RAW pairs + other utils.
 - **[aim-baseline.ipynb](aim-baseline.ipynb)** - End-to-end guide to load the data, train a simple UNet model and make your first submission!
@@ -20,9 +37,8 @@ If you want to double-check your submission please check [scoring/evaluation.py]
 
 <a href="[https://ibb.co/ckVNydX](https://codalab.lisn.upsaclay.fr/competitions/5079)"><img src="https://i.ibb.co/hLwKgv1/Screenshot-from-2022-06-11-22-33-14.png" alt="Screenshot-from-2022-06-11-22-33-14" width="450" border="0"></a>
 
-------
 
-## Datasets
+### Datasets
 
 **Samsung S7 DeepISP Dataset**
 
@@ -68,9 +84,7 @@ For each track, the training / validation split is as follows:
 - track 1:  Training samples: 4320 	 Validation samples: 480
 - track 2:  Training samples: 5760 	 Validation samples: 720
 
-------
-
-## Hints and Tips
+### Hints and Tips
 
 - RAW images are provided as `np.uint16` with max value `2**10 = 1024`. 
 - The RAW images are packed as (h,w,4) , you can unpack it and obtain a (h*2, w*2,1) RAW using the corresponding utils. We recommend to use the 4-channel RAW image.
@@ -79,6 +93,18 @@ For each track, the training / validation split is as follows:
 - For the S7 dataset, most of the images are well-aligned, SSIM and PSNR should work as perceptual metrics.
 - For the HP20 dataset, most of the images are **not** aligned. The RGB from the ISP is the process of many transformations including cropping and zooming. Therefore, in this track we recommend perceptual losses as SSIM, MSSSIM and KL-Divergence. In this track, we focus on SSIM as standard metric, but we will consider internally the other mentioned metrics. 
 - The ISP corrects many artifacts such as noise and blur. The original RAW images threfore might contain such artifacts.
+
+------
+
+## [MAI 2022 Learned ISP Challenge](https://codalab.lisn.upsaclay.fr/competitions/1759)
+
+You can find at [mai22-learnedisp](mai22-learnedisp/) and end-to-end baseline: dataloading, training top solution, model conversion to tflite.
+The model achieved 23.46dB PSNR after training for a few hours. Here you can see a sample RAW input and the resultant RGB.
+
+<img src="mai22-learnedisp/result-isp3.png" width="400" border="0">
+
+We test the model on AI Benchmark. The model average latency is 60ms using a input RAW image `544,960,4` and generating a RGB `1088,1920,3`, in a mid-level smartphone (45.4 AI-score) using Delegate GPU and FP16.
+
 
 ------
 
@@ -94,14 +120,31 @@ For each track, the training / validation split is as follows:
 
 [5] [CycleISP: Real Image Restoration via Improved Data Synthesis](https://arxiv.org/abs/2003.07761) by Zamir et al. , CVPR 2020
 
-
-## Related Challenge
+**Related Challenge**
 
 [Mobile AI & AIM 2022 Learned Smartphone ISP Challenge](https://codalab.lisn.upsaclay.fr/competitions/1759) organized by Andrey Ignatov.
 
 
-## Contact - Organizers
+-----------------
 
-Marcos Conde (marcos.conde-osorio@uni-wuerzburg.de) and Radu Timofte (Radu.Timofte [at] uni-wuerzburg.de) are the contact persons and direct managers of the AIM challenge. Please add in the email subject "AIM22 Reverse ISP Challenge".
+## Citation and Acknowledgement
 
-More information about AIM workshop and challenge organizers is available here: https://data.vision.ee.ethz.ch/cvl/aim22/
+```
+@article{conde2022modelbased, 
+	title={Model-Based Image Signal Processors via Learnable Dictionaries},
+	author={Conde, Marcos V. and McDonagh, Steven and Maggioni, Matteo and Leonardis, Ales and Pérez-Pellitero, Eduardo},
+	journal={Proceedings of the AAAI Conference on Artificial Intelligence}, 
+	url={https://ojs.aaai.org/index.php/AAAI/article/view/19926}, 
+	DOI={10.1609/aaai.v36i1.19926},  
+	year={2022}, 
+	month={Jun.},
+	volume={36},
+	number={1},  
+	pages={481-489} 
+}
+```
+
+
+## Contact
+
+Marcos Conde (marcos.conde-osorio@uni-wuerzburg.de) and Radu Timofte (radu.timofte@uni-wuerzburg.de) are the contact persons and direct managers of the AIM challenge. Please add in the email subject "AIM22 Reverse ISP Challenge" or "AISP"
