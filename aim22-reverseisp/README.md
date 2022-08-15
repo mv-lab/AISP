@@ -11,10 +11,10 @@ In this challenge, we look for solutions to recover RAW readings from the camera
 
 ### Starter guide and code 🔥
 
-- **[aim-starter-code.ipynb](aim-starter-code.ipynb)** - Simple dataloading and visualization of RGB-RAW pairs + other utils.
-- **[aim-baseline.ipynb](aim-baseline.ipynb)** - End-to-end guide to load the data, train a simple UNet model and make your first submission!
+- **[aim-starter-code.ipynb](official-starter-code.ipynb)** - Simple dataloading and visualization of RGB-RAW pairs + other utils.
+- **[aim-baseline.ipynb](official-baseline.ipynb)** - End-to-end guide to load the data, train a simple UNet model and make your first submission!
 
-We also provide the baseline pretrained [starter-models](starter-models) and other utils like the scoring scripts.
+We also provide the baseline pretrained [baseline-ckps](baseline-ckps) and other utils like the scoring scripts.
 You can download here a [track 1](https://drive.google.com/file/d/1RmIqB48jeS6HZuf2x2_DUqI9IssOEWNI/view?usp=sharing) and [track 2](https://drive.google.com/file/d/1AlG3WbZtCztpgMkw5S3cAwZYOyU5Wpyq/view?usp=sharing) dummy submissions.
 If you want to double-check your submission please check [scoring/evaluation.py](scoring/evaluation.py), it is important to save properly the RAW images as indicated. Read more details below.
 
@@ -27,7 +27,7 @@ If you want to double-check your submission please check [scoring/evaluation.py]
 
 We use a custom version of the dataset collected by Schwartz et al. in their work *[DeepISP: Learning End-to-End Image Processing Pipeline](https://arxiv.org/abs/1801.06724)*. We process the original RAW images (GRBG pattern) and extract "aligned" RGB-RAW pairs (patches).
 
-<img src="media/sample2.jpg" width="500" alt="" border="0">
+<img src="../media/sample2.jpg" width="500" alt="" border="0">
 
 
 **ETH Huawei P20 Dataset**
@@ -35,7 +35,7 @@ We use a custom version of the dataset collected by Schwartz et al. in their wor
 We use a custom version of the dataset from [ETH PyNET by Ignatov et al.](http://people.ee.ethz.ch/~ihnatova/pynet.html#dataset), a large-scale dataset consisting of RAW-RGB image pairs captured in the wild with the Huawei P20 camera (12.3 MP Sony Exmor IMX380 sensor).
 More information in their paper *[Replacing Mobile Camera ISP with a Single Deep Learning Model](https://arxiv.org/abs/2002.05509)*
 
-<img src="media/sample1.jpg" width="500" alt="" border="0">
+<img src="../media/sample1.jpg" width="500" alt="" border="0">
 
 **Data Structure**
 
