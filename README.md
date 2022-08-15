@@ -1,5 +1,10 @@
 # AI Image Signal Processing
 
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2201.03210)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=mv-lab/AISP)
+
+<br>
+
 [Marcos V. Conde](https://scholar.google.com/citations?user=NtB1kjYAAAAJ&hl=en), [Radu Timofte](https://scholar.google.com/citations?user=u3MwH5kAAAAJ&hl=en)
 
 Computer Vision Lab, CAIDAS, University of Würzburg
@@ -24,8 +29,8 @@ In this challenge, we look for solutions to recover RAW readings from the camera
 
 ### Starter guide and code 🔥
 
-- **[aim-starter-code.ipynb](aim22-reverseisp/aim-starter-code.ipynb)** - Simple dataloading and visualization of RGB-RAW pairs + other utils.
-- **[aim-baseline.ipynb](aim22-reverseisp/aim-baseline.ipynb)** - End-to-end guide to load the data, train a simple UNet model and make your first submission!
+- **[aim-starter-code.ipynb](aim22-reverseisp/official-starter-code.ipynb)** - Simple dataloading and visualization of RGB-RAW pairs + other utils.
+- **[aim-baseline.ipynb](aim22-reverseisp/official-baseline.ipynb)** - End-to-end guide to load the data, train a simple UNet model and make your first submission!
 
 
 ------
