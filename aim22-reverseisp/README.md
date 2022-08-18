@@ -11,8 +11,9 @@ In this challenge, we look for solutions to recover RAW readings from the camera
 
 ### Starter guide and code 🔥
 
-- **[aim-starter-code.ipynb](official-starter-code.ipynb)** - Simple dataloading and visualization of RGB-RAW pairs + other utils.
+- **[compare-methods.ipynb](compare-methods.ipynb)** - Visual comparison of challenge methods for RAW images reconstruction using different selected images.
 - **[aim-baseline.ipynb](official-baseline.ipynb)** - End-to-end guide to load the data, train a simple UNet model and make your first submission!
+- **[aim-starter-code.ipynb](official-starter-code.ipynb)** - Simple dataloading and visualization of RGB-RAW pairs + other utils.
 
 We also provide the baseline pretrained [baseline-ckps](baseline-ckps) and other utils like the scoring scripts.
 You can download here a [track 1](https://drive.google.com/file/d/1RmIqB48jeS6HZuf2x2_DUqI9IssOEWNI/view?usp=sharing) and [track 2](https://drive.google.com/file/d/1AlG3WbZtCztpgMkw5S3cAwZYOyU5Wpyq/view?usp=sharing) dummy submissions.

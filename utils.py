@@ -6,7 +6,6 @@ import imageio
 
 
 def extract_bayer_channels(raw):
-
     ch_B  = raw[1::2, 1::2]
     ch_Gb = raw[0::2, 1::2]
     ch_R  = raw[0::2, 0::2]
@@ -15,11 +14,17 @@ def extract_bayer_channels(raw):
     return ch_R, ch_Gr, ch_B, ch_Gb
 
 def load_rawpy (raw_file):
+    '''
+    Load RAW images in .dng format using rawpy 
+    '''
     raw = rawpy.imread(raw_file)
     raw_image = raw.raw_image
     return raw_image
 
 def load_img (filename, debug=False, norm=True, resize=None):
+    '''
+    Load RGB image
+    '''
     img = cv2.imread(filename)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     if norm:   
@@ -34,6 +39,7 @@ def load_img (filename, debug=False, norm=True, resize=None):
     return img
 
 def save_rgb (img, filename):
+    '''Save RGB image <img> as 8bit 3-channel using the provided <filename>'''
     if np.max(img) <= 1:
         img = img * 255
     
@@ -71,8 +77,12 @@ def load_raw_png(raw, debug=False):
     
     return RAW_norm
 
-def load_raw(raw, max_val=2**10):
-    raw = np.load (raw)/ max_val
+def load_raw(raw_path, max_val=2**10):
+    '''
+    Loads RAW images saved as '.npy' files and type np.uint16 
+    '''
+    raw = np.load (raw_path)/ max_val
+    raw = np.clip(raw, 0., 1.)
     return raw.astype(np.float32)
 
 
@@ -108,7 +118,6 @@ def pack_raw(im):
     return out
 
 
-
 ########## VISUALIZATION
 
 def demosaic (raw):
@@ -131,7 +140,6 @@ def demosaic (raw):
     image      = cv2.resize(image, (shape[1]*2, shape[0]*2))
     return image
 
-
 def mosaic(rgb):
     """Extracts RGGB Bayer planes from an RGB image."""
     
@@ -145,7 +153,6 @@ def mosaic(rgb):
     
     image = np.stack((red, green_red, green_blue, blue), axis=-1)
     return image
-
 
 def gamma_compression(image):
     """Converts from linear to gamma space."""
@@ -165,19 +172,39 @@ def postprocess_raw(raw):
     raw = np.clip(raw, 0, 1)
     return raw
 
-def plot_pair (rgb, raw, t1='RGB', t2='RAW', axis='off'):
-    
+def plot_pair (img1, img2, t1='RGB', t2='RAW', axis='off'):
+    '''
+    Plot pair of images
+    '''
     fig = plt.figure(figsize=(12, 6), dpi=80)
     plt.subplot(1,2,1)
     plt.title(t1)
     plt.axis(axis)
-    plt.imshow(rgb)
+    plt.imshow(img1)
 
     plt.subplot(1,2,2)
     plt.title(t2)
     plt.axis(axis)
-    plt.imshow(raw)
+    plt.imshow(img2)
     plt.show()
+
+def plot_all (images, figsize=(12, 6), axis='off', titles=None):
+    '''
+    Plots in a row the list of "images" provided.
+    '''
+    fig = plt.figure(figsize=figsize, dpi=80)
+    
+    nplots = len(images)
+    
+    for i in range(nplots):
+        
+        plt.subplot(1,nplots,i+1)
+        plt.axis(axis)
+        plt.imshow(images[i])
+        if titles: plt.title(titles[i])
+
+    plt.show()
+
 
 ########## METRICS
 
