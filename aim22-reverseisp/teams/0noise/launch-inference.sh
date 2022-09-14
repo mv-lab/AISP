@@ -1,0 +1,2 @@
+#nice python inference_evaluation.py --gpu 0 --amp --dataset_dir /mnt/D/data/aim-reverse-isp/p20/test --trained_model p20
+nice python inference_evaluation.py --gpu 0 --amp --dataset_dir /mnt/D/data/aim-reverse-isp/s7/test --trained_model s7
