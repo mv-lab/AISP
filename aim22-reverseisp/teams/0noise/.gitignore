@@ -1,0 +1,15 @@
+*.DS_Store
+wandb/
+**.jpg
+**.png
+results/
+.idea/
+.vscode/
+venv/
+*.tar.gz
+*.zip
+*.pkl
+*.pyc
+*.mat
+*.npy
+*.pth
