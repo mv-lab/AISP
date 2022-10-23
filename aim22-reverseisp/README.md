@@ -1,7 +1,23 @@
 ## [AIM 2022 Reversed ISP Challenge](https://data.vision.ee.ethz.ch/cvl/aim22/) 
 
-### [Track 1 - S7](https://codalab.lisn.upsaclay.fr/competitions/5079)
-### [Track 2 - P20](https://codalab.lisn.upsaclay.fr/competitions/5080)
+### [Track 1 - S7](https://codalab.lisn.upsaclay.fr/competitions/5079) | [Track 2 - P20](https://codalab.lisn.upsaclay.fr/competitions/5080)
+
+
+------------------
+
+**News 🚀🚀**
+
+- [10/2022] The presented papers and material from the AIM workshop can be found at [aim-material ](aim-material/). The code from the top solutions is available at [teams](teams/) here.
+- [10/2022] The challenge report is public at [Reversed Image Signal Processing and RAW Reconstruction. AIM 2022 Challenge Report](https://arxiv.org/abs/2210.11153)
+- [10/2022] [Advances in Image Manipulation (AIM) workshop](https://data.vision.ee.ethz.ch/cvl/aim22/), ECCV 2022, Tel Aviv. IS ON 🔥
+
+
+<a href="aim-material/AIM 2022 Reversed ISP Challenge.pdf"><img src="../media/aim-risp-intro.png" width="600" border="0"></a>
+
+------------------
+
+
+### Introduction
 
 <a href="https://data.vision.ee.ethz.ch/cvl/aim22/"><img src="https://i.ibb.co/VJ7SSQj/aim-challenge-teaser.png" alt="aim-challenge-teaser" width="400" border="0"></a>
 
@@ -77,3 +93,9 @@ For each track, the training / validation split is as follows:
 - For the S7 dataset, most of the images are well-aligned, SSIM and PSNR should work as perceptual metrics.
 - For the HP20 dataset, most of the images are **not** aligned. The RGB from the ISP is the process of many transformations including cropping and zooming. Therefore, in this track we recommend perceptual losses as SSIM, MSSSIM and KL-Divergence. In this track, we focus on SSIM as standard metric, but we will consider internally the other mentioned metrics. 
 - The ISP corrects many artifacts such as noise and blur. The original RAW images threfore might contain such artifacts.
+
+---
+
+### AIM 2022 Sponsors
+
+<img src="../media/aim-sponsors.png" width="700" alt="" border="0">
