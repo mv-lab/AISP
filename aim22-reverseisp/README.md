@@ -1,4 +1,6 @@
-## [AIM 2022 Reversed ISP Challenge](https://data.vision.ee.ethz.ch/cvl/aim22/) 
+# [AIM 2022 Reversed ISP Challenge @ ECCV 2022](https://data.vision.ee.ethz.ch/cvl/aim22/) 
+
+## [Reversed Image Signal Processing and RAW Reconstruction. AIM 2022 Challenge Report](https://arxiv.org/abs/2210.11153)
 
 ### [Track 1 - S7](https://codalab.lisn.upsaclay.fr/competitions/5079) | [Track 2 - P20](https://codalab.lisn.upsaclay.fr/competitions/5080)
 
@@ -7,6 +9,7 @@
 
 **News 🚀🚀**
 
+- More updates soon
 - [10/2022] The presented papers and material from the AIM workshop can be found at [aim-material ](aim-material/). The code from the top solutions is available at [teams](teams/) here.
 - [10/2022] The challenge report is public at [Reversed Image Signal Processing and RAW Reconstruction. AIM 2022 Challenge Report](https://arxiv.org/abs/2210.11153)
 - [10/2022] [Advances in Image Manipulation (AIM) workshop](https://data.vision.ee.ethz.ch/cvl/aim22/), ECCV 2022, Tel Aviv. IS ON 🔥
@@ -19,7 +22,7 @@
 
 ### Introduction
 
-<a href="https://data.vision.ee.ethz.ch/cvl/aim22/"><img src="https://i.ibb.co/VJ7SSQj/aim-challenge-teaser.png" alt="aim-challenge-teaser" width="400" border="0"></a>
+<a href="https://data.vision.ee.ethz.ch/cvl/aim22/"><img src="https://i.ibb.co/VJ7SSQj/aim-challenge-teaser.png" alt="aim-challenge-teaser" width="500" border="0"></a>
 
 Digital cameras transform sensor RAW readings into RGB images by means of their Image Signal Processor (ISP). Computational photography tasks such as image denoising and colour constancy are commonly performed in the RAW domain, in part due to the inherent hardware design, but also due to the appealing simplicity of noise statistics that result from the direct sensor readings. Despite this, the availability of RAW images is limited in comparison with the abundance and diversity of available RGB data. Recent approaches have attempted to bridge this gap by estimating the RGB to RAW mapping [1-5].
 
@@ -94,8 +97,35 @@ For each track, the training / validation split is as follows:
 - For the HP20 dataset, most of the images are **not** aligned. The RGB from the ISP is the process of many transformations including cropping and zooming. Therefore, in this track we recommend perceptual losses as SSIM, MSSSIM and KL-Divergence. In this track, we focus on SSIM as standard metric, but we will consider internally the other mentioned metrics. 
 - The ISP corrects many artifacts such as noise and blur. The original RAW images threfore might contain such artifacts.
 
----
+-------------
 
-### AIM 2022 Sponsors
+## Citation and Acknowledgement
+
+```
+@inproceedings{conde2022model,
+  title={Model-Based Image Signal Processors via Learnable Dictionaries},
+  author={Conde, Marcos V and McDonagh, Steven and Maggioni, Matteo and Leonardis, Ales and P{\'e}rez-Pellitero, Eduardo},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={1},
+  pages={481--489},
+  year={2022}
+}
+
+@inproceedings{conde2022aim,
+  title={{R}eversed {I}mage {S}ignal {P}rocessing and {RAW} {R}econstruction. {AIM} 2022 {C}hallenge {R}eport},
+  author={Conde, Marcos V and Timofte, Radu and others},
+  booktitle={Proceedings of the European Conference on Computer Vision Workshops (ECCVW)},
+  year={2022}
+}
+```
+
+
+## Contact
+
+Marcos Conde (marcos.conde-osorio@uni-wuerzburg.de) and Radu Timofte (radu.timofte@uni-wuerzburg.de) are the contact persons and direct managers of the AIM challenge. Please add in the email subject "AIM22 Reverse ISP Challenge" or "AISP"
+
+
+## AIM 2022 Sponsors
 
 <img src="../media/aim-sponsors.png" width="700" alt="" border="0">
