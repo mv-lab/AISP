@@ -1,0 +1,6 @@
+[submodule "aim22-reverseisp/teams/mialgo"]
+	path = aim22-reverseisp/teams/mialgo
+	url = https://github.com/q935970314/AIM22-ReverseISP-MiAlgo
+[submodule "aim22-reverseisp/teams/SSDNet"]
+	path = aim22-reverseisp/teams/SSDNet
+	url = https://github.com/yuezhang98/Learned-Reverse-ISP-with-Soft-Supervision
