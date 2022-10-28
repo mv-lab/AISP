@@ -120,6 +120,20 @@ For each track, the training / validation split is as follows:
 }
 ```
 
+-----------
+
+
+## Related Work
+
+[1] [Model-Based Image Signal Processors via Learnable Dictionaries](https://ojs.aaai.org/index.php/AAAI/article/view/19926) by Conde et al, AAAI 2022.
+
+[2] [Learning Raw Image Reconstruction-Aware Deep Image Compressors](https://abhijithpunnappurath.github.io/pami_raw.pdf) by Abhijith Punnappurath and Michael S. Brown, TPAMI 2019.
+
+[3] [Unprocessing Images for Learned Raw Denoising](https://arxiv.org/abs/1811.11127) by Brooks et al. , CVPR 2019
+
+[4] [CycleISP: Real Image Restoration via Improved Data Synthesis](https://arxiv.org/abs/2003.07761) by Zamir et al. , CVPR 2020
+
+
 
 ## Contact
 
