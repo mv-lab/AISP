@@ -1,25 +1,31 @@
-# AI Image Signal Processing
+# AI Image Signal Processing and ISPs
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2201.03210)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=mv-lab/AISP)
 
-<br>
 
 [Marcos V. Conde](https://scholar.google.com/citations?user=NtB1kjYAAAAJ&hl=en), [Radu Timofte](https://scholar.google.com/citations?user=u3MwH5kAAAAJ&hl=en)
 
-Computer Vision Lab, CAIDAS, University of Würzburg
-
-#### Contents
-
-1. [AIM 2022 Reversed ISP Challenge](#aim-2022-reversed-isp-challenge) Official repo!
-1. [Model-Based Image Signal Processors via Learnable Dictionaries](https://ojs.aaai.org/index.php/AAAI/article/view/19926) AAAI 2022 Oral - Official repo!
-1. [MAI 2022 Learned ISP Challenge](#mai-2022-learned-isp-challenge) Complete Baseline solution
-1. [Citation and Acknowledgement](#citation-and-acknowledgement)
-1. [Contact](#contact)
+[Computer Vision Lab, CAIDAS, University of Würzburg](https://www.informatik.uni-wuerzburg.de/computervision/home/)
 
 ---------------------------------------------------
 
-## [AIM 2022 Reversed ISP Challenge](https://data.vision.ee.ethz.ch/cvl/aim22/) 
+#### Official repository for the following works:
+
+1. **[Perceptual Image Enhancement for Smartphone Real-Time Applications](https://arxiv.org/abs/2210.13552) (LPIENet) at WACV 2023.**
+1. **[Reversed Image Signal Processing and RAW Reconstruction. AIM 2022 Challenge Report](aim22-reverseisp/) ECCV, AIM 2022**
+1. **[Model-Based Image Signal Processors via Learnable Dictionaries](https://ojs.aaai.org/index.php/AAAI/article/view/19926) AAAI 2022 Oral**
+1. [MAI 2022 Learned ISP Challenge](#mai-2022-learned-isp-challenge) Complete Baseline solution
+1. [Citation and Acknowledgement](#citation-and-acknowledgement) | [Contact](#contact)
+
+**News 🚀🚀**
+
+- [11/2022] LPIENet release soon!
+- [10/2022] Reversed ISP and RAW Reconstruction material presented at AIM workshop ECCV 2022 is now available! [check here](aim22-reverseisp/)
+
+---------------------------------------------------
+
+## [AIM 2022 Reversed ISP Challenge](aim22-reverseisp/) 
 
 ### [Track 1 - S7](https://codalab.lisn.upsaclay.fr/competitions/5079) | [Track 2 - P20](https://codalab.lisn.upsaclay.fr/competitions/5080)
 
@@ -41,6 +47,10 @@ In this challenge, we look for solutions to recover RAW readings from the camera
 
 > Hybrid model-based and data-driven approach for modelling ISPs using learnable dictionaries. We explore RAW image reconstruction and improve downstream tasks like RAW Image Denoising via raw data augmentation-synthesis.
 
+
+<img src="mbispld/mbispld.png" alt="mbdlisp" width="600" border="0">
+
+
 The code will be released soon. If you have implementation questions or you need qualitative samples for comparison, please contact me.
 
 We provide the figure/illustration of our method in [mbispld](mbispld/mbispld.pdf).
@@ -56,25 +66,6 @@ The model achieved 23.46dB PSNR after training for a few hours. Here you can see
 <img src="mai22-learnedisp/result-isp3.png" width="400" border="0">
 
 We test the model on AI Benchmark. The model average latency is 60ms using a input RAW image `544,960,4` and generating a RGB `1088,1920,3`, in a mid-level smartphone (45.4 AI-score) using Delegate GPU and FP16.
-
-
-------
-
-## Related Work
-
-[1] [Model-Based Image Signal Processors via Learnable Dictionaries](https://ojs.aaai.org/index.php/AAAI/article/view/19926) by Conde et al, AAAI 2022.
-
-[2] [Learned Smartphone ISP on Mobile NPUs with Deep Learning, Mobile AI 2021 Challenge: Report](https://arxiv.org/abs/2105.07809) by Ignatov et al, CVPRW 2021.
-
-[3] [Learning Raw Image Reconstruction-Aware Deep Image Compressors](https://abhijithpunnappurath.github.io/pami_raw.pdf) by Abhijith Punnappurath and Michael S. Brown, TPAMI 2019.
-
-[4] [Unprocessing Images for Learned Raw Denoising](https://arxiv.org/abs/1811.11127) by Brooks et al. , CVPR 2019
-
-[5] [CycleISP: Real Image Restoration via Improved Data Synthesis](https://arxiv.org/abs/2003.07761) by Zamir et al. , CVPR 2020
-
-**Related Challenges**
-
-[Mobile AI & AIM 2022 Learned Smartphone ISP Challenge](https://codalab.lisn.upsaclay.fr/competitions/1759) organized by Andrey Ignatov.
 
 
 -----------------
