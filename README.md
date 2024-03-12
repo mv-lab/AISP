@@ -39,6 +39,14 @@
 | <a href="https://openaccess.thecvf.com/content/CVPR2023W/NTIRE/papers/Seizinger_Efficient_Multi-Lens_Bokeh_Effect_Rendering_and_Transformation_CVPRW_2023_paper.pdf"><img src="media/papers/bokeh-ntire23.png" width="300" border="0"></a>  | <a href="https://arxiv.org/abs/2210.13552"><img src="media/papers/lpienet-wacv23.png" width="300" border="0"></a>  | <a href="https://arxiv.org/abs/2210.11153"><img src="media/papers/reisp-aim22.png" width="255" border="0"></a>  | <a href="https://arxiv.org/abs/2201.03210"><img src="media/papers/isp-aaai22.png" width="300" border="0"></a>
 |  |  |  |  |
 
+-----
+## [Efficient Multi-Lens Bokeh Effect Rendering and Transformation](ebokeh/) (CVPRW '23) 
+
+This work is the state-of-the-art method for bokeh rendering and transformation and baseline of the NTIRE 2023 Bokeh Challenge.
+
+Read the full paper at: [Efficient Multi-Lens Bokeh Effect Rendering and Transformation](https://openaccess.thecvf.com/content/CVPR2023W/NTIRE/papers/Seizinger_Efficient_Multi-Lens_Bokeh_Effect_Rendering_and_Transformation_CVPRW_2023_paper.pdf)
+
+
 ------
 
 ## [Perceptual Image Enhancement for Smartphone Real-Time Applications](https://arxiv.org/abs/2210.13552) (WACV '23)
