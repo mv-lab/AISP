@@ -147,7 +147,7 @@ The model achieved 23.46dB PSNR after training for a few hours. Here you can see
 
 <img src="mai22-learnedisp/result-isp3.png" width="400" border="0">
 
-We test the model on AI Benchmark. The model average latency is 60ms using a input RAW image `544,960,4` and generating a RGB `1088,1920,3`, in a mid-level smartphone (45.4 AI-score) using Delegate GPU and FP16.
+We test the model on AI Benchmark. The model average latency is 60ms using an input RAW image `544,960,4` and generating a RGB `1088,1920,3`, in a mid-level smartphone (45.4 AI-score) using Delegate GPU and FP16.
 
 
 -----------------
