@@ -77,7 +77,7 @@ def load_raw_png(raw, debug=False):
     
     return RAW_norm
 
-def load_raw(raw_path, max_val=2**10):
+def load_raw(raw_path, max_val=2**12 -1):
     '''
     Loads RAW images saved as '.npy' files and type np.uint16 
     '''
@@ -112,15 +112,16 @@ def pack_raw(im):
     W = img_shape[1]
     ## R G G B
     out = np.concatenate((im[0:H:2,0:W:2,:], 
-                       im[0:H:2,1:W:2,:],
-                       im[1:H:2,0:W:2,:],
-                       im[1:H:2,1:W:2,:]), axis=2)
+                          im[0:H:2,1:W:2,:],
+                          im[1:H:2,0:W:2,:],
+                          im[1:H:2,1:W:2,:]), axis=2)
+
     return out
 
 
 ########## VISUALIZATION
 
-def demosaic (raw):
+def demosaic (raw, pattern='RGGB'):
     """Simple demosaicing to visualize RAW images
     Inputs:
      - raw: (h,w,4) RAW RGGB image normalized [0..1] as float32
@@ -131,11 +132,27 @@ def demosaic (raw):
     assert raw.shape[-1] == 4
     shape = raw.shape
     
-    red        = raw[:,:,0]
-    green_red  = raw[:,:,1]
-    green_blue = raw[:,:,2]
-    blue       = raw[:,:,3]
-    avg_green  = (green_red + green_blue) / 2
+    c1 = raw[:,:,0]
+    c2 = raw[:,:,1]
+    c3 = raw[:,:,2]
+    c4 = raw[:,:,3]
+    
+    if pattern == 'RGGB':
+        red= c1; green_red=c2; green_blue=c3; blue=c4
+        avg_green  = (green_red + green_blue) / 2
+        
+    elif pattern == 'GBRG':
+        red= c3; green_red=c1; green_blue=c4; blue=c2
+        avg_green  = (green_red + green_blue) / 2
+        
+    elif pattern == 'GRBG':
+        red= c2; green_red=c1; green_blue=c4; blue=c3
+        avg_green  = (green_red + green_blue) / 2
+        
+    else:
+        print ('Wrong pattern', pattern, 'only RGGB / GRBG are supported.')
+        return 0
+        
     image      = np.stack((red, avg_green, blue), axis=-1)
     image      = cv2.resize(image, (shape[1]*2, shape[0]*2))
     return image
@@ -213,6 +230,9 @@ def PSNR(y_true, y_pred):
     if(mse == 0):  
         return np.inf
     
-    max_pixel = np.max(y_true)
-    psnr = 20 * np.log10(max_pixel / np.sqrt(mse))
+    psnr = 20 * np.log10(1 / np.sqrt(mse))
     return psnr
+
+
+if __name__ == "__main__":
+    pass

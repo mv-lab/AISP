@@ -4,8 +4,6 @@
 [![isp](https://img.shields.io/badge/ISP-paper-lightgreen)](https://arxiv.org/abs/2201.03210)
 [![lpienet](https://img.shields.io/badge/LPIENet-paper-lightpink)](https://arxiv.org/abs/2210.13552)
 [![bokeh](https://img.shields.io/badge/Bokeh-paper-9cf)](https://openaccess.thecvf.com/content/CVPR2023W/NTIRE/papers/Seizinger_Efficient_Multi-Lens_Bokeh_Effect_Rendering_and_Transformation_CVPRW_2023_paper.pdf)
-[![ntire23](https://img.shields.io/badge/NTIRE-CVPR23-lightcyan)](https://cvlai.net/ntire/2023/)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=mv-lab/AISP)
 
 
 **[Marcos V. Conde](https://scholar.google.com/citations?user=NtB1kjYAAAAJ&hl=en), [Radu Timofte](https://scholar.google.com/citations?user=u3MwH5kAAAAJ&hl=en)**
@@ -14,11 +12,35 @@
 
 ---------------------------------------------------
 
-> **Topics** This repository contains material for RAW image processing, RAW image reconstruction and synthesis, learned Image Signal Processing (ISP), Image Enhancement and Restoration (denoising, deblurring), Multi-lense Bokeh effect rendering, and much more! 📷
+> **Topics** This repository contains material for RAW image processing, RAW Restoration and Super-Resolution, RAW reconstruction from sRGB, learned Image Signal Processing (ISP), Image Enhancement and Restoration (denoising, deblurring), Bokeh rendering, and much more! 📷
+
+**NEWS 🚀🚀**
+- [NTIRE (New Trends in Image Restoration and Enhancement) workshop](https://www.cvlai.net/ntire/2025/) at CVPR 2025
+- 🔥 This repo is back and will be updated with many more works!
 
 <br>
 
+----
+
+### RAW Image Restoration, Super-Resolution and Reconstruction at NTIRE CVPR 2025
+
+We provide code for the following challenges:
+- [NTIRE 2025 RAW Restoration Challenge: Track1) Super-Resolution](https://codalab.lisn.upsaclay.fr/competitions/21644)
+- [NTIRE 2025 RAW Restoration Challenge: Track2) Restoration](https://codalab.lisn.upsaclay.fr/competitions/21647)
+- [NTIRE 2025 RAW Image Reconstruction from sRGB](https://codalab.lisn.upsaclay.fr/competitions/21648)
+
+Check the tutorial for generating degraded RAW images! You can learn: how to read and visualize RAWs, add noise, blur, and downsample. Base code for training **RAW restoration, denoising and super-resolution** methods. The tutorial is at [imresutils/generate_lq.ipynb](imresutils/generate_lq.ipynb).
+
+<a href="imresutils/generate_lq.ipynb"><img src="media/raw_degradations.png" width="1000" border="0"></a>
+
+----
+
 #### Official repository for the following works:
+
+Most recent works:
+- **[BSRAW: Improving Blind RAW Image Super-Resolution](https://arxiv.org/abs/2312.15487), WACV 2024**
+- **[Deep RAW Image Super-Resolution. A NTIRE 2024 Challenge Survey](https://arxiv.org/abs/2404.16223), CVPRW 2024**
+- **[Toward Efficient Deep Blind Raw Image Restoration](https://arxiv.org/abs/2409.18204), ICIP 2024**
 
 1. **[Efficient Multi-Lens Bokeh Effect Rendering and Transformation](https://openaccess.thecvf.com/content/CVPR2023W/NTIRE/papers/Seizinger_Efficient_Multi-Lens_Bokeh_Effect_Rendering_and_Transformation_CVPRW_2023_paper.pdf)** at **CVPR NTIRE 2023**.
 1. **[Perceptual Image Enhancement for Smartphone Real-Time Applications](https://arxiv.org/abs/2210.13552) (LPIENet) at WACV 2023.**
@@ -27,12 +49,6 @@
 1. [MAI 2022 Learned ISP Challenge](#mai-2022-learned-isp-challenge) Complete Baseline solution
 1. [Citation and Acknowledgement](#citation-and-acknowledgement) | [Contact](#contact) for any inquiries.
 
-**News 🚀🚀**
-
-- will try to keep the repo updated on a monthly basis ✏️
-- [06/2023] Lens-to-lens bokeh effect transformation and NTIRE 2023 material coming soon.
-- [01/202] LPIENet material is out
-- [10/2022] Reversed ISP and RAW Reconstruction material presented at AIM workshop ECCV 2022 is now available! [check here](aim22-reverseisp/)
 
 |  |  |  |  |
 |:--- |:--- |:--- |:---|
